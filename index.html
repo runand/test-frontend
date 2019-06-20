@@ -1,0 +1,22 @@
+<html>
+<head>
+
+<script>
+fetch('/api').then((resp) => resp.json()).then(function(resp) {
+
+var el = document.createElement('div');
+var domString = '<div class="container">' + JSON.stringify(resp) + '</div>';
+el.innerHTML =  domString;
+document.body.appendChild(el.firstChild);   
+ 
+})
+.catch(function() {
+    // This is where you run code if the server returns any errors
+});
+</script>
+</head>
+<body>
+<h1>frontend</h1>
+
+</body>
+</html>
